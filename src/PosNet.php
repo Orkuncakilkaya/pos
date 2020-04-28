@@ -528,7 +528,7 @@ class PosNet implements PosInterface
             if ($this->data->oosResolveMerchantDataResponse->mdStatus == '1') {
                 $transaction_security = 'Full 3D Secure';
                 $status = 'approved';
-            } elseif (in_array($this->data->oosResolveMerchantDataResponse->mdStatus, [2, 3, 4])) {
+            } elseif (in_array($this->data->oosResolveMerchantDataResponse->mdStatus, [2, 3, 4, 9])) {
                 $transaction_security = 'Half 3D Secure';
                 $status = 'approved';
             }
